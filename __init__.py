@@ -3,4 +3,4 @@
 
 # Author        Diego Carvajal, diegoivanc@gmail.com
 
-import models
+from . import models
