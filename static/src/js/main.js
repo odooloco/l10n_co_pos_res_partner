@@ -30,11 +30,7 @@ models.push(
         loaded: function(self, departments) {
             self.departments = departments;
             //alert("Hola Mundo!");
-            for (var i = 0; i < departments.length; i++) {
-                if (departments[i].country_id === self.company.country_id[0]){
-                    self.departments = departments[i];
-                }
-        }
+
     },
     {
         model:  'res.country.state.city',
