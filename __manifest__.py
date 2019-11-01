@@ -5,9 +5,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.    #
 #                                                                             #
 #                                                                             #
-# Copyright (C) 2016  Dominic Krimmer                                         #
-#                     Luis Alfredo da Silva (luis.adasilvaf@gmail.com)        #
-#                     Diego Carvajal, diegoivanc@gmail.com                    #
 #                                                                             #
 # Co-Authors    Odoo LoCo                                                     #
 #               Localización funcional de Odoo para Colombia                  #
@@ -26,14 +23,15 @@
 # You should have received a copy of the GNU Affero General Public License    #
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.       #
 ###############################################################################
+
 {
-    'name': 'Colombia - Punto de venta - res partner',
+    'name': 'Colombia - Punto de venta - Res partner',
     'category': 'Localization',
-    'version': '1.0',
-    'author': 'Dominic Krimmer,Luis Alfredo da Silva (luis.adasilvaf@gmail.com),Diego Carvajal, diegoivanc@gmail.com , odoo loco',
+    'version': '12.0',
+    'author': 'Odoo LoCo',
     'license': 'AGPL-3',
-    'maintainer': ' ',
-    'website': ' ',
+    'maintainer': 'Odoo LoCo',
+    'website': 'https://github.com/odooloco',
     'summary': ' ',
     'description': """
 Colombia Point of Sale:
@@ -42,15 +40,9 @@ Colombia Point of Sale:
     'depends': [
         'point_of_sale',
         'l10n_co_res_partner'
-       #'l10n_co_tax_extension'
     ],
     'data': [
         'views/pos_view.xml',
-        #'views/point_of_sale_view.xml',
-        #'report/report_sessionsummary.xml',
-        #'security/ir.model.access.csv',
-        #'views/report_receipt.xml',
-        #'views/view_report_pos_order.xml'
     ],
     'qweb': ['static/src/xml/*.xml'],
     'installable': True,
