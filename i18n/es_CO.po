@@ -15,6 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+
 #. module: l10n_co_pos_res_partner
 #: selection:res.partner,doctype:0
 msgid "11 - Birth Certificate"
@@ -54,6 +55,120 @@ msgstr "41 - Pasaporte"
 #: selection:res.partner,doctype:0
 msgid "42 - Foreign Identification Document"
 msgstr "42 - Documento de identificación extranjero"
+
+#. module: l10n_co_pos_res_partner
+#: selection:res.partner,doctype:0
+msgid "43 - No Foreign Identification"
+msgstr "43 - Sin identificación del exterior o para uso definido por la DIAN"
+
+#. module: l10n_co_pos_res_partner
+#: model:ir.ui.view,arch_db:l10n_co_pos_res_partner.res_partner_kanban_view_extened
+msgid "<b>Information is incomplete!</b><br/> Please update soon!"
+msgstr "<b>¡Datos incompletos!</b><br/> Por favor, actualice pronto."
+
+#. module: l10n_co_pos_res_partner
+#: model:ir.model.fields,field_description:l10n_co_pos_res_partner.field_res_partner_xbirthday
+msgid "Birthday"
+msgstr "Fecha de Nacimiento"
+
+#. module: l10n_co_pos_res_partner
+#: model:ir.model.fields,field_description:l10n_co_pos_res_partner.field_res_partner_companyBrandName
+msgid "Brand"
+msgstr "Marca"
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Identification type"
+msgstr "Tipo Identifación"
+
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Is a company?"
+msgstr "Es una Compañia"
+
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Identification number"
+msgstr "Número de Identificación"
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "First name"
+msgstr "Primer Nombre"
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Lastname"
+msgstr "Primer Apellido"
+
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Phone"
+msgstr "Teléfono"
+
+
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Second name"
+msgstr "Segundo Nombre"
+
+
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Second lastname"
+msgstr "Segundo Apellido"
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Street"
+msgstr "Calle"
+
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Department"
+msgstr "Departamento"
+
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "City"
+msgstr "Ciudad"
+
+
+#. module: l10n_co_pos_res_partner
+#. openerp-web
+#: code:addons/l10n_co_pos_res_partner/static/src/xml/pos.xml:847
+#, python-format
+msgid "Street"
+msgstr "Calle"
 
 #. module: l10n_co_pos_res_partner
 #: selection:res.partner,doctype:0
