@@ -11,7 +11,22 @@ var _t = core._t;
 var rpc = require('web.rpc');
 
 var models = module.PosModel.prototype.models;
-var partner_fields = ['x_name1',
+var partner_fields = [
+                      'name',
+                      'phone',
+                      'email',
+                      'city',
+                      'zip',
+                      'street',
+                      'street2',
+                      'state_id',
+                      'country_id',
+                      'vat',
+                      'company_name',
+                      'district_id',
+                      'mobile',
+                      'partner_id',
+                      'x_name1',
                       'x_name2',
                       'x_lastname1',
                       'x_lastname2',
@@ -21,7 +36,12 @@ var partner_fields = ['x_name1',
                       'xidentification',
                       'formatedNit',
                       'xcity',
-                      'state_id'];
+                      'state_id',
+                      'verificationDigit',
+                      'pos_name',
+                      'companyBrandName',
+                      'is_company'
+                    ];
 
 
 models.push(
@@ -45,9 +65,9 @@ models.push(
         loaded: function(self) {
            rpc.query({
                         model: 'res.partner',
-                        method: 'get_persontype',
+                        method: 'pos_get_persontype',
                         args: [{
-                                'get_persontype': [0],
+                                'pos_get_persontype': [0],
                         }]
                         }).then(function (persontypes) {
                         console.log(persontypes);
@@ -56,9 +76,9 @@ models.push(
 
             rpc.query({
                         model: 'res.partner',
-                        method: 'get_doctype',
+                        method: 'pos_get_doctype',
                         args: [{
-                                'get_doctype': [0],
+                                'pos_get_doctype': [0],
                         }]
                         }).then(function (doctypes) {
                         console.log(doctypes);
@@ -137,10 +157,10 @@ screens.ClientListScreenWidget.include({
             }
             $('.partner-names').hide();
             $(".client-persontype").removeAttr("disabled").val('2').parent().css("visibility", "visible");
-            $(".client-first-name").val("");
-            $(".client-second-name").val("");
-            $(".client-first-lastname").val("");
-            $(".client-second-lastname").val("");
+            $(".client-first-name").val("N/D");
+            $(".client-second-name").val("N/D");
+            $(".client-first-lastname").val("N/D");
+            $(".client-second-lastname").val("N/D");
         } else {
             name.attr("disabled", "disabled");
             name.unbind("change");

@@ -26,10 +26,13 @@
 
 
 from odoo import models, fields, api, osv, _
+from odoo import http
+from odoo.http import request
 import logging
 _logger = logging.getLogger(__name__)
 logger = logging.getLogger(__name__)
-import json
+import json, sys
+
 
 
 class res_partner(models.Model):
@@ -56,3 +59,23 @@ class res_partner(models.Model):
             partner_id = self.create(partner).id
 
         return partner_id
+    
+    def pos_get_doctype(self,  context={'lang': 'es_CO'}):
+        result = []
+        try:            
+            for item in self.env['res.partner'].with_context(context)._fields['doctype'].selection:
+                result.append({'id': item[0], 'name': item[1]})
+        except Exception as e:
+            raise Warning(getattr(e, 'message', repr(e))+" ON LINE "+format(sys.exc_info()[-1].tb_lineno))
+            pass
+        return result
+
+    def pos_get_persontype(self, context={'lang': 'es_CO'}):
+        result = []
+        try:
+            for item in self.env['res.partner'].with_context(context)._fields['personType'].selection:
+                result.append({'id': item[0], 'name': item[1]})
+        except Exception as e:
+            raise Warning(getattr(e, 'message', repr(e))+" ON LINE "+format(sys.exc_info()[-1].tb_lineno))
+            pass
+        return result
